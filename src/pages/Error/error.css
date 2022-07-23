@@ -1,0 +1,15 @@
+.e404{
+    text-align: center;
+    margin: 20px 0px;
+}
+.e404 h1{
+    margin: 20px;
+}
+.e404 a{
+    font-size: 20px;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px
+}

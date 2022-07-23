@@ -1,0 +1,81 @@
+.loading{
+    text-align: center;
+    margin: 20px 0px;
+}
+.filme-info{
+    text-align: center;
+    height: 900px;
+}
+.conteiner-detalhes{
+    padding: 100px 0px;
+}
+.infos{
+    margin: 0px auto;
+    justify-content: space-around;
+    display: flex;
+    background-color: white;
+    opacity: 0.9;
+    width: 80%;
+    padding: 50px;
+    border-radius: 15px;
+}
+.img{
+    width: 300px;
+}
+.img img{
+    width: 300px;
+}
+.info-geral{
+    text-align: justify;
+    margin-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info-geral h1{
+    font-size: 40px;
+}
+.info-geral p, h3{
+    margin-top: 20px
+}
+.buttons button{
+    margin: 10px;
+    padding: 15px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.buttons button a{
+    text-decoration: none;
+    color: black;
+}
+.buttons button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+.genero{
+    display: flex;
+}
+.genero p{
+    margin-left: 5px;
+}
+.genero p+p{
+    padding-left: 5px;
+    border-left: 1px solid black;
+}
+.companies{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box-companias{
+    width: 300px;
+
+}
+.box-companias img{
+    width: 100%;
+}
