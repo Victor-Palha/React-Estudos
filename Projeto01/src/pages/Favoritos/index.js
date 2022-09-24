@@ -14,7 +14,7 @@ function Favoritos(){
 
     function deleteFilme(id){
         const filterList = filmes.filter((filme)=>{
-            return (filme.id != id)
+            return (filme.id !== id)
         })
         setFilmes(filterList)
         localStorage.setItem("@primeflix", JSON.stringify(filterList))
