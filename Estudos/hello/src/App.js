@@ -1,4 +1,5 @@
 import './App.css';
+import Challenge from './components/Challege';
 import Events from './components/Events';
 import FirstComponent from './components/FirstComponent';
 import MyComponent from './components/MyComponent';
@@ -12,6 +13,9 @@ function App() {
       <TempleteExpressions/>
       <MyComponent/>
       <Events/>
+      <div>
+        <Challenge/>
+      </div>
     </div>
   );
 }
