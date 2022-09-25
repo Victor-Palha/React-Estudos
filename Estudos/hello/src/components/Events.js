@@ -8,6 +8,9 @@ return(
         <div>
             <button onClick={handleMyEvent}>Clique Aqui</button>
         </div>
+        <div>
+            <button onClick={()=>alert("Arrow Function")}>Clique aqui também</button>
+        </div>
     </div>
 )
 }
