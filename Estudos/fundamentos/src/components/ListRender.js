@@ -6,8 +6,8 @@ const ListRender = ()=>{
     return(
         <>
             <ul>
-                {list.map((name)=>(
-                    <li>{name}</li>
+                {list.map((name, i)=>(
+                    <li kay={i}>{name}</li>
                 ))}
             </ul>
         </>
