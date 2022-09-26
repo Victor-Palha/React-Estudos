@@ -1,5 +1,6 @@
 import './App.css';
 import Astral from "./assets/Astral.png"
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       {/* Img from Assets */}
       <div className="astral">
         <img src={Astral} alt="alternative cover Astral adventure Guide"/>
+      </div>
+      <div>
+        <ManageData/>
       </div>
     </div>
   );
