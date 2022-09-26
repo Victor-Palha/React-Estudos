@@ -1,5 +1,6 @@
 import './App.css';
 import Astral from "./assets/Astral.png"
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
       <div>
         <ManageData/>
       </div>
+      <>
+      <ListRender/>
+      </>
     </div>
   );
 }
