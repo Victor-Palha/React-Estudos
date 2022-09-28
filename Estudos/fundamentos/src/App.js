@@ -23,14 +23,19 @@ function App() {
       <div className="astral">
         <img src={Astral} alt="alternative cover Astral adventure Guide"/>
       </div>
+      {/*UseState*/}
       <div>
         <ManageData/>
       </div>
+      {/*Loop useState*/}
       <>
         <ListRender/>
       </>
+      {/*Props*/}
       <ShowUserName username="victor"/>
+      {/*Props destructuring*/}
       <CarDetails marca="Honda" cor="Prata" ano="2012" novo={false}/>
+      {/*Loop component*/}
       {cars.map((car)=>(
         <CarDetails marca={car.marca} cor={car.cor} ano={car.ano} novo={car.novo}/>
       ))}
