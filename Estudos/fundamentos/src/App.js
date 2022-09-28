@@ -4,6 +4,7 @@ import Astral from "./assets/Astral.png"
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
+import CarDetails from './components/CarDetails';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <ListRender/>
       </>
       <ShowUserName username="victor"/>
+      <CarDetails marca="Honda" cor="Prata" placa="XXZ1025" ano="2012"/>
     </div>
   );
 }
