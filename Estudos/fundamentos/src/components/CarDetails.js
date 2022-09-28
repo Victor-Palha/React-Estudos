@@ -1,11 +1,14 @@
 import React from "react";
-const CarDetails = ({marca, ano, cor, placa})=>{
+const CarDetails = ({marca, ano, cor, novo})=>{
     return(
         <div>
-            <h3>Marca do carro: {marca}</h3>
-            <p>Ano do carro: {ano}</p>
-            <p>Cor do carro: {cor}</p>
-            <p>Placa do carro: {placa}</p>
+            <h2>Detalhes do carro</h2>
+            <ul>
+                <li>Marca: {marca}</li>
+                <li>Ano: {ano}</li>
+                <li>Cor: {cor}</li>
+                {novo && <p>Novo carro!</p>}
+            </ul>
         </div>
     )
 }
