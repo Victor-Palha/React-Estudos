@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import React from "react"
 
 const ListRender = ()=>{
     const [list] = useState(["Victor", "Star", "Moon", "Galaxy", "Sun"])

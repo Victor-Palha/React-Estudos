@@ -1,4 +1,5 @@
 import {useState} from "react"
+import React from "react"
 const ManageData = ()=>{
     const [name, setName] = useState("João")
     return(

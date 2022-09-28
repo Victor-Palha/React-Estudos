@@ -1,7 +1,9 @@
 import './App.css';
+import React from 'react';
 import Astral from "./assets/Astral.png"
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
+import ShowUserName from './components/ShowUserName';
 
 function App() {
   return (
@@ -19,8 +21,9 @@ function App() {
         <ManageData/>
       </div>
       <>
-      <ListRender/>
+        <ListRender/>
       </>
+      <ShowUserName username="victor"/>
     </div>
   );
 }
