@@ -1,0 +1,9 @@
+.my_title{
+    background-color: pink;
+    color: white;
+    transition: 0.9s;
+    cursor: pointer;
+}
+.my_title:hover{
+    transform: rotate(180deg);
+}

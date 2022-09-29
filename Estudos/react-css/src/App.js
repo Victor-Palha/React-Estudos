@@ -2,6 +2,7 @@
 import './App.css';
 import MyComponent from './components/MyComponent';
 import {useState} from "react"
+import Title from './components/Title';
 
 function App() {
   const [vali, setVali] = useState(10)
@@ -24,6 +25,8 @@ function App() {
       <button onClick={handleText}>Change Text</button>
       {/* Dinamic class */}
       <h3 className={dinamic ? "true-title" : "false-title"}>Dinamic class</h3>
+      {/* CSS module */}
+      <Title/>
     </div>
   );
 }
