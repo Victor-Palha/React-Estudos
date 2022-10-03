@@ -10,10 +10,14 @@ const MyForm = () => {
     }
     console.log(nome)
     console.log(email)
+    //Submit
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+    }
     return (
         <div>
             {/*Criação do form */}
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor='nome'>Nome:</label>
                     <input type="text" name='nome' placeholder='Digite seu nome' onChange={handleName}/>

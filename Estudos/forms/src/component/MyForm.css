@@ -3,6 +3,9 @@ form{
     margin: 0 auto;
     text-align: left;
 }
+input[type=submit]{
+    cursor: pointer;
+}
 input, textarea, select{
     display: block;
     margin-top: 10px;
