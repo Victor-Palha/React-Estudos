@@ -47,7 +47,7 @@ const MyForm = ({user}) => {
                 <div>
                     <label>
                         <span>Função</span>
-                        <select onChange={(e)=>setRole(e.target.value)}>
+                        <select name="role" onChange={(e)=>setRole(e.target.value)}>
                             <option value="progamador jr">Programador Jr</option>
                             <option value="programador pleno">Programador Pleno</option>
                             <option value="programdor senior">Programador Senior</option>
