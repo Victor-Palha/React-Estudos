@@ -14,6 +14,8 @@ const MyForm = ({user}) => {
         e.preventDefault()
         console.log(nome)
         console.log(email)
+        setName("")
+        setEmail("")
     }
     return (
         <div>
