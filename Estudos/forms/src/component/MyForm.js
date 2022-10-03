@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import "./MyForm.css"
 
-const MyForm = () => {
+const MyForm = ({user}) => {
     // Gerenciamento de dados
-    const [nome, setName] = useState()
-    const [email, setEmail] = useState()
+    const [nome, setName] = useState(user? user.name : "")
+    const [email, setEmail] = useState(user ? user.email : "")
     const handleName = (e)=>{
         setName(e.target.value)
     }
-    console.log(nome)
-    console.log(email)
+    
     //Submit
     const handleSubmit = (e)=>{
         e.preventDefault()
+        console.log(nome)
+        console.log(email)
     }
     return (
         <div>
@@ -20,13 +21,13 @@ const MyForm = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor='nome'>Nome:</label>
-                    <input type="text" name='nome' placeholder='Digite seu nome' onChange={handleName}/>
+                    <input type="text" name='nome' placeholder='Digite seu nome' onChange={handleName} value={nome}/>
                 </div>
                 {/*Label envolvendo INPUT */}
                 <div>
                     <label>
                         <span>E-mail: </span>
-                        <input type="email" placeholder='Digite seu E-mail' name="E-mail" onChange={(e)=>setEmail(e.target.value)}/>
+                        <input type="email" placeholder='Digite seu E-mail' name="E-mail" onChange={(e)=>setEmail(e.target.value)} value={email}/>
                     </label>
                 </div>
                     <input type="submit"/>
