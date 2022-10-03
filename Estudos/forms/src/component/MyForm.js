@@ -3,12 +3,13 @@ import "./MyForm.css"
 
 const MyForm = () => {
     // Gerenciamento de dados
-    const [nome, setName] = useState("")
-    const [email, setEmail] = useState("")
+    const [nome, setName] = useState()
+    const [email, setEmail] = useState()
     const handleName = (e)=>{
         setName(e.target.value)
     }
     console.log(nome)
+    console.log(email)
     return (
         <div>
             {/*Criação do form */}
@@ -21,7 +22,7 @@ const MyForm = () => {
                 <div>
                     <label>
                         <span>E-mail: </span>
-                        <input type="email" placeholder='Digite seu E-mail' name="E-mail"/>
+                        <input type="email" placeholder='Digite seu E-mail' name="E-mail" onChange={(e)=>setEmail(e.target.value)}/>
                     </label>
                 </div>
                     <input type="submit"/>
