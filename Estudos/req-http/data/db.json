@@ -1,34 +1,44 @@
 {
-    "products":[
-        {
-            "id": 1,
-            "name": "Camisa",
-            "price": 59.9
-        },
-        {
-            "id":2,
-            "name": "Calça vermelha",
-            "price":90
-        },
-        {
-            "id":3,
-            "name":"Boné aba reta",
-            "price":29.9
-        },
-        {
-            "id":4,
-            "name":"Jaqueta jeans",
-            "price":199.9
-        },
-        {
-            "id":5,
-            "name": "Camisa D&D",
-            "price":49.9
-        },
-        {
-            "id":6,
-            "name": "Camisa copa do mundo",
-            "price": 150
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "id": 4,
+      "name": "Jaqueta jeans",
+      "price": 199.9
+    },
+    {
+      "id": 5,
+      "name": "Camisa D&D",
+      "price": 49.9
+    },
+    {
+      "id": 6,
+      "name": "Camisa copa do mundo",
+      "price": 150
+    },
+    {
+      "name": "teste",
+      "price": "10",
+      "id": 7
+    },
+    {
+      "name": "Sapato Nike",
+      "price": "200",
+      "id": 8
+    }
+  ]
 }
