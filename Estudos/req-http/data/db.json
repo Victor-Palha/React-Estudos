@@ -64,6 +64,16 @@
       "name": "tablet",
       "price": "999",
       "id": 13
+    },
+    {
+      "name": "monitor redragon",
+      "price": "3000",
+      "id": 14
+    },
+    {
+      "name": "teste",
+      "price": "100",
+      "id": 19
     }
   ]
 }
