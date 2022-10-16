@@ -44,6 +44,26 @@
       "name": "Teclado Redragon ",
       "price": "350",
       "id": 9
+    },
+    {
+      "name": "teste",
+      "price": "100",
+      "id": 10
+    },
+    {
+      "name": "asda",
+      "price": "1212",
+      "id": 11
+    },
+    {
+      "name": "mouse",
+      "price": "59",
+      "id": 12
+    },
+    {
+      "name": "tablet",
+      "price": "999",
+      "id": 13
     }
   ]
 }
