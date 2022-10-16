@@ -27,6 +27,13 @@
 .App-link {
   color: #61dafb;
 }
+ul{
+  list-style: none;
+}
+ul li button{
+  margin: 10px;
+  cursor: pointer;
+}
 form{
   border: 1px solid black;
   box-shadow: 0px 0px 5px black;

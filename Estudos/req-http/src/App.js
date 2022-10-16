@@ -10,23 +10,8 @@ function App() {
   const {data:items, httpConfig, loading, error} = useFetch(url)
   const [name, setName] = useState()
   const [price, setPrice] = useState()
-  
 
-  //Resgatando dados
-  /*
-  useEffect(()=>{
-    async function getData(url){
 
-      const res = await fetch(url)
-      const data = await res.json()
-
-      setProducts(data)
-    }
-
-    getData(url)
-
-  },[])
-  */
   //Adicionando datas
   const handleSubmit = async (e)=>{
     e.preventDefault()
@@ -34,23 +19,14 @@ function App() {
       name,
       price
     }
-    /*
-    const res = await fetch(url,{
-      method: "POST",
-      headers: {
-        "Content-Type":"application/json"
-      },
-      body: JSON.stringify(product)
-    })
-
-    //Carregamento dinamico
-    const addedProduct = await res.json()
-    setProducts((prevProducts) => [...prevProducts, addedProduct])
-*/
     //refatorando post
     httpConfig(product, "POST")
     setName("")
     setPrice("")
+  }
+
+  const handleDelete = async (id)=>{
+    httpConfig(id, "DELETE")
   }
 
   return (
@@ -62,7 +38,10 @@ function App() {
       {!error && (
         <ul>
           {items && items.map((product)=>(
-            <li key={product.id}>{product.name} - R$: {product.price}</li>
+              <li key={product.id}>
+                {product.name} - R$: {product.price}
+                <button onClick={()=>handleDelete(product.id)}>Deletar</button>
+              </li>
           ))}
         </ul>
       )}
