@@ -7,7 +7,7 @@ const url = "http://localhost:3000/products"
 function App() {
   //const [products, setProducts] = useState([])
 
-  const {data:items, httpConfig, loading} = useFetch(url)
+  const {data:items, httpConfig, loading, error} = useFetch(url)
   const [name, setName] = useState()
   const [price, setPrice] = useState()
   
@@ -58,7 +58,8 @@ function App() {
       <h1>Lista de Produtos</h1>
       {/*Loading */}
       {loading && <p>Carregando dados...</p>}
-      {!loading && (
+      {error && <p>{error}</p>}
+      {!error && (
         <ul>
           {items && items.map((product)=>(
             <li key={product.id}>{product.name} - R$: {product.price}</li>
@@ -75,7 +76,10 @@ function App() {
               <span>Preço:</span>
               <input type="number" value={price} onChange={(e)=> setPrice(e.target.value)}/>
             </label>
-            <input type="submit" value="Criar"/>
+            {/* State de loading */}
+            {loading && (<input type="submit" disabled value="Aguarde..."/>)}
+            {!loading && (<input type="submit" value="Criar"/>)}
+            
           </form>
       </div>
     </div>

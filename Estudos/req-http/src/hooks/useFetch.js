@@ -8,6 +8,7 @@ export const useFetch = (url)=>{
     const [config, setConfig] = useState(null)
     const [method, setMethod] = useState(null)
     const [callFetch, setCallFetch] = useState(false)
+    const [error, setError] = useState(null)
 
     //Loading
     const [loading, setLoading] = useState(false)
@@ -29,10 +30,15 @@ export const useFetch = (url)=>{
     useEffect(()=>{
         const fetchData = async ()=>{
             setLoading(true)
-            const res = await fetch(url)
-            const json = await res.json()
+            try {
+                const res = await fetch(url)
+                const json = await res.json()
 
-            setData(json)
+                setData(json)
+            } catch (error) {
+                console.log(error.message)
+                setError("Houve um problema ao carregar os dados...")
+            }
             setLoading(false)
         }
 
@@ -54,5 +60,5 @@ export const useFetch = (url)=>{
        httpRequest()
     },[config, method, url])
 
-    return {data, httpConfig, loading}
+    return {data, httpConfig, loading, error}
 }
