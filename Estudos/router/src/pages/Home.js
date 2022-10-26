@@ -10,6 +10,7 @@ const Home = () => {
     <div>
         <h1>PRODUTOS</h1>
         {error && <p>{error}</p>}
+        {loading && <p>Carregando...</p>}
         <ul className='products'>
             {items && items.map(item => (
                 <Link to={"/products/"+item.id}>
