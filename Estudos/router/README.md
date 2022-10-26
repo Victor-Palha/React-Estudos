@@ -4,3 +4,6 @@
 * BrowserRouter: Define onde a área do nosso app que vai trocar as páginas;
 * Routes: Define as rotas;
 * Route: Um elemento deste para cada rota, configurar com path e componente da rota
+
+# PAGES
+* Pages are components and they stay on *pages* folder
