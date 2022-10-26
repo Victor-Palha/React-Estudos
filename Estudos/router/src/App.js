@@ -1,13 +1,14 @@
 import React from 'react'
 import './App.css';
+
+//Router
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 //Componentes
 import NavBar from './components/NavBar';
 //pages
 import Home from './pages/Home';
 import About from './pages/About';
-
-//Router
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path='/products/:id' element={<Products/>}/>
         </Routes>
       </BrowserRouter>
     </div>

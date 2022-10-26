@@ -10,3 +10,9 @@
 * Para usar links para redirecionar usuários é necessário importar do react router dom.
 * `import { Link } from 'react-router-dom'`
 * OBS: Como o Link é do Reacr Router Dom, ele deve ser posto ou o componente que utiliza ele, dentro do `BrowserRouter`
+
+## Rotas Dinamicas
+* Para criar uma rota dinâmica vamos precisar definir uma *nova Route* em App.js
+* Que deve ter o padrão de: */products/:id*
+* Onde *:id* é o dado dinâmic, ou sejam podemos ter qualquer valor
+* Na página podemos utilizar o Hook *useParams* para resgatar esta informação
