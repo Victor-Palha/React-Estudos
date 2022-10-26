@@ -4,6 +4,9 @@
 * BrowserRouter: Define onde a área do nosso app que vai trocar as páginas;
 * Routes: Define as rotas;
 * Route: Um elemento deste para cada rota, configurar com path e componente da rota
+* Páginas são componentes e ficam na pasta *pages*
 
-# PAGES
-* Pages are components and they stay on *pages* folder
+## LINKS
+* Para usar links para redirecionar usuários é necessário importar do react router dom.
+* `import { Link } from 'react-router-dom'`
+* OBS: Como o Link é do Reacr Router Dom, ele deve ser posto ou o componente que utiliza ele, dentro do `BrowserRouter`
