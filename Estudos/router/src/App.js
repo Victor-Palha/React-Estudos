@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import Info from './pages/Info';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           {/* Nasted Routes */}
           <Route path='/products/:id/info' element={<Info/>}/>
           <Route path='/products/:id' element={<Products/>}/>
+          {/* No match route 404 */}
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </div>

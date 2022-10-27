@@ -21,3 +21,9 @@
 * As Nested routes indicam *URLs mais complexas*, como: `/products/:id/something`;
 * Neste caso vamos precisar criar um componente que corresponda com o padrão indicado e também a URL em App.js
 * Na nested route *teremos o acesso ao parâmetro da URL* também
+
+## No match route (404)
+* Podemos criar uma *página 404* facilmente com React Router
+* Basta *Criarmos o componente* da página
+* E no arquivo App.js definir um *path como '*'*
+* Desta maneira, qualquer rota que não exista cairá neste componente
