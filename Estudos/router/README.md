@@ -16,3 +16,8 @@
 * Que deve ter o padrão de: */products/:id*
 * Onde *:id* é o dado dinâmic, ou sejam podemos ter qualquer valor
 * Na página podemos utilizar o Hook *useParams* para resgatar esta informação
+
+## Nested Route
+* As Nested routes indicam *URLs mais complexas*, como: `/products/:id/something`;
+* Neste caso vamos precisar criar um componente que corresponda com o padrão indicado e também a URL em App.js
+* Na nested route *teremos o acesso ao parâmetro da URL* também

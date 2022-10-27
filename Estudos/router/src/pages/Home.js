@@ -13,8 +13,8 @@ const Home = () => {
         {loading && <p>Carregando...</p>}
         <ul className='products'>
             {items && items.map(item => (
-                <Link to={"/products/"+item.id}>
-                    <li key={item.id}>
+                <Link to={"/products/"+item.id}  key={item.id}>
+                    <li>
                         <h2>{item.name}</h2>
                         <p>R$ {item.price}</p>
                         <span>Ver mais +</span>
