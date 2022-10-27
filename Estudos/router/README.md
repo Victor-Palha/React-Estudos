@@ -38,3 +38,9 @@
 * *Search params* é um recurso que permite obter o que vem na URL em forma de parâmetro, ex: `products?q=camisa`
 * Utilizamos o Hooke `useSearchParams` para obtê-los
 * Com este recurso fica simples fazer uma *funcionalidade de busca* no sistema
+
+## Redirect
+* Podemos precisar de um *redirecionamento de páginas* eventualmente
+* *Exemplo:* uma página antiga do sistema responde agora a uma nova URL
+* Para isso vamos *criar a rota com Route* normalmente
+* Mas em element vamos utilizar o *componente Navigate* com um *to* que vai para a rota correta

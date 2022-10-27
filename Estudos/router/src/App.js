@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 
 //Router
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 //Componentes
 import NavBar from './components/NavBar';
 //pages
@@ -29,6 +29,8 @@ function App() {
           <Route path='/products/:id' element={<Products/>}/>
           {/* search */}
           <Route path='/search' element={<Search/>}/>
+          {/* Redirect */}
+          <Route path="/company" element={<Navigate to="/about"/>}/>
           {/* No match route 404 */}
           <Route path="*" element={<NotFound/>}/>
         </Routes>
