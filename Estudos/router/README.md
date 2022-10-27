@@ -27,3 +27,9 @@
 * Basta *Criarmos o componente* da página
 * E no arquivo App.js definir um *path como '*'*
 * Desta maneira, qualquer rota que não exista cairá neste componente
+
+## Links Ativo
+* Para ter fácil acesso a uma modificação para os links ativos vamos trocar o Link pelo `NavLink`
+* Neste elemento temos acesso a um valor chamado `isActive`
+* Ou seja, podemos *Ativar uma classe* se a rota atual for a que está no `atributo to`
+* Podemos também fazer validações com else if: `className={({isActive}) => (isActive ? "yes" : "no")}`
