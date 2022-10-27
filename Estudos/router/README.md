@@ -33,3 +33,8 @@
 * Neste elemento temos acesso a um valor chamado `isActive`
 * Ou seja, podemos *Ativar uma classe* se a rota atual for a que está no `atributo to`
 * Podemos também fazer validações com else if: `className={({isActive}) => (isActive ? "yes" : "no")}`
+
+## Search Params
+* *Search params* é um recurso que permite obter o que vem na URL em forma de parâmetro, ex: `products?q=camisa`
+* Utilizamos o Hooke `useSearchParams` para obtê-los
+* Com este recurso fica simples fazer uma *funcionalidade de busca* no sistema
