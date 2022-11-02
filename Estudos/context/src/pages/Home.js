@@ -10,8 +10,12 @@ const Home = () => {
   //const {counter, setCounter} = useContext(CounterContext)
   const {counter, setCounter} = useCounterContext()
 
-  const {color} = useTitleColorContext()
+  const {color, dispatch} = useTitleColorContext()
 
+  //alter complex context
+  const setTitleColor = (color)=>{
+    dispatch({type: color})
+  }
 
   //alter context functions
   const handleCounter = ()=>{
@@ -27,6 +31,10 @@ const Home = () => {
       {/* Alter context */}
       <button onClick={handleCounter}>Aumentar</button>
       <button onClick={handleClear}>Limpar</button>
+      <div>
+        <button onClick={()=>setTitleColor("RED")}>Crimson</button>
+        <button onClick={()=>setTitleColor("BLACK")}>Black</button>
+      </div>
     </div>
   )
 }

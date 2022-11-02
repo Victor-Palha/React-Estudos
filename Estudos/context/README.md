@@ -28,3 +28,9 @@
 * Que *é como um useState*, mas para controle de dados complexos
 * No reducer teremos diferentes ações com um *switch*
 * E na aplicaçao vamos consumir o estado atual do dado que está no reducer
+
+## Alterando contexto complexo
+* Para alterar o contexto vamos utilizar uma função chamada `dispatch`
+* Ele estará no `reducer` também
+* E deve conter todas as informações necessárias para a alteração do valor do contexto
+* Ou seja, o *switch entra em ação* e retorna um novo contexto
