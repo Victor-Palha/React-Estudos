@@ -14,6 +14,7 @@ const Home = () => {
     <div>
       <h1>Home</h1>
       <p>Contador: {counter}</p>
+      {/* Alter context */}
       <button onClick={handleCounter}>Aumentar</button>
       <button onClick={handleClear}>Limpar</button>
     </div>

@@ -11,3 +11,8 @@
 * E este Provider deve *encapsular os demais componentes* em que precisamos consultar ou alterar o valor
 * Geralmente ele fica em *App.js* ou em *index.js*
 * Agora poderemos *compartilhar o valor do contexto* em todos os componentes
+
+## Alterando o contexto
+* Para alterar o valor do contexto *precisamos criar um componente que utilize a função da mudança de contexto*
+* Esta mudança ocorrerá no COntext e *poderá ser consumida por todos os componentes* que recebem o contexto
+* E assim finalizamos o *ciclo* da Context API
