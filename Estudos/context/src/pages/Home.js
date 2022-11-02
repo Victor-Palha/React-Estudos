@@ -1,9 +1,13 @@
-import React from 'react'
+//import React from 'react'
 import { useContext } from 'react'
-import { CounterContext } from '../context/CounterContext'
+//import { CounterContext } from '../context/CounterContext'
+//refactoring with hook
+import { useCounterContext } from '../hooks/useCounterContext'
 
 const Home = () => {
-  const {counter, setCounter} = useContext(CounterContext)
+  //const {counter, setCounter} = useContext(CounterContext)
+  const {counter, setCounter} = useCounterContext()
+  //alter context functions
   const handleCounter = ()=>{
     setCounter(counter+1)
   }

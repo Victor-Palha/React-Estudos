@@ -16,3 +16,8 @@
 * Para alterar o valor do contexto *precisamos criar um componente que utilize a função da mudança de contexto*
 * Esta mudança ocorrerá no COntext e *poderá ser consumida por todos os componentes* que recebem o contexto
 * E assim finalizamos o *ciclo* da Context API
+
+## Refatorando context com hook
+* Podemos *criar um hook para utilizar o contexto*, isso nos dá algumas vantagens
+* *Não precisamos importar o useContext em todos os lugares* que vamos usar o contexto, só o hook
+* Temos um espaço para fazer uma *validação do contexto*
