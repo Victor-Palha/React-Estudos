@@ -21,3 +21,10 @@
 * Podemos *criar um hook para utilizar o contexto*, isso nos dá algumas vantagens
 * *Não precisamos importar o useContext em todos os lugares* que vamos usar o contexto, só o hook
 * Temos um espaço para fazer uma *validação do contexto*
+
+## Contexto mais complexo
+* Contextos mais complexos podem ter *variações no comportamento*
+* Para isso vamos utilizar um hook chamado `useReducer`
+* Que *é como um useState*, mas para controle de dados complexos
+* No reducer teremos diferentes ações com um *switch*
+* E na aplicaçao vamos consumir o estado atual do dado que está no reducer
