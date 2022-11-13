@@ -159,3 +159,43 @@ export default App;
   margin-bottom: 5em;
 }
 ```
+## Criando formulário de cadastro
+* Vamos criar uma página de login dentro da pasta `pages` e uma página de registro também na pasta `pages`
+* Depois de criado as páginas, vamos criar seus respectivos arquivos *CSS*
+* Com isso criado vamos ir para `src/pages/Register/Register.js` para criar o formulário.
+```js
+import React from 'react'
+import styles from "./Register.module.css"
+
+const Register = () => {
+  return (
+    <div>
+      <h1>Cadastre-se!</h1>
+      <form>
+        <label>
+          <span>Nome:</span>
+          <input type="text" name="displayName" required placeholder='Nome de usuário'/>
+        </label>
+        <label>
+          <span>E-mail:</span>
+          <input type="email" name="email" required placeholder='E-mail do usuário'/>
+        </label>
+        <label>
+          <span>Senha:</span>
+          <input type="password" name="password" required placeholder='Insira sua senha' />
+        </label>
+        <label>
+          <span>Confirmação de senha:</span>
+          <input type="password" name="confirmPassword" required placeholder='Confirme a sua senha' />
+        </label>
+        <button className='btn'>Cadastrar</button>
+      </form>
+    </div>
+  )
+}
+
+export default Register
+```
+* Depois de criar o formulário podemos fazer nosso CSS da maneira que quisermos, como vamos ter muitos forms durante a aplicação, os estilos foram feitos em `src/index.css` para o CSS global.
+
+## States do form de cadastro
