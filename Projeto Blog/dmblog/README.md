@@ -61,3 +61,101 @@ function App() {
 
 export default App;
 ```
+
+## Criando componente de Navbar e Footer
+* Primeiro vamos criar uma pasta para os components `src/components`.
+* Depois da pasta criada vamos criar o component navbar `src/components/Navbar.js` e criar o style dele `Navbar.module.css`.
+* Depois de criar a Navbar vamos repetir o processo para criar um Footer na pasta components `src/components/Footer.js` e `Footer.module.css`.
+* Após a criação da Navbar e do Footer vamos importar eles no `App.js`.
+```js
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Navbar/> 
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
+    </div>
+  );
+}
+```
+* OBS: Não esqueçam de importar os components
+* Depois de importar os components, vamos dar funcionalidades para eles, primeiro a Navbar:
+```js
+import React from 'react'
+import styles from "./Navbar.module.css"
+import {NavLink} from "react-router-dom"
+const Navbar = () => {
+  return (
+    <nav>
+        <NavLink to="/">
+            DM <span>Blog</span>
+        </NavLink>
+        <ul>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">Sobre</NavLink></li>
+        </ul>
+    </nav>
+  )
+}
+
+export default Navbar
+```
+* Depois o Footer:
+```js
+import React from 'react'
+import styles from "./Footer.module.css"
+const Footer = () => {
+  return (
+    <footer>
+      <h3>Um Blog para DMs!</h3>
+      <p>DM Blog &copy; 2022</p>
+    </footer>
+  )
+}
+
+export default Footer
+```
+* De quebra, vamos ir em App.js e colocar uma div e dar um estilo no `App.css`
+* `src/App.js`
+```js
+import './App.css';
+import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
+//Pages
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Navbar/>
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/about' element={<About/>}/>
+          </Routes>
+        </div>
+        <Footer/>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+```
+
+* `src/App.css`
+
+```css
+.container {
+  min-height: 60vh;
+  margin-bottom: 5em;
+}
+```
