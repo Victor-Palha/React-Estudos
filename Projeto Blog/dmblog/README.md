@@ -12,3 +12,52 @@
     export {db}
 ```
 
+## Configurando React Router
+* Instalando pacote `npm i react-router-dom`.
+* Depois de instalar vamos fazer a configuração no `App.js`.
+* `import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"` - Dentro do `App.js` vamos fazer a config do router
+```js
+    import './App.css';
+    import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
+
+    function App() {
+    return (
+        <div className="App">
+        <BrowserRouter>
+            <Routes>
+                <Route/>
+            </Routes>
+        </BrowserRouter>
+        </div>
+    );
+    }
+
+    export default App;
+```
+* Depois de fazer a configuração base, vamos criar em `src` a pasta `pages` e dentro de pages criar pastas relativas as página do projeto, sendo elas `src/pages/Home` e `src/pages/About`.
+* Dentro dessas páginas crie um componente para servir como página. `src/pages/Home/Home.js` e `src/pages/About/About.js`.
+* Depois de criar os arquivos, crie os css no estilo module e importe para os componentes.
+* Depois do css criado e das páginas configuradas, vamos voltar para `App.js` e terminar de configurar as rotas.
+* Seu App.js deve ficar assim:
+```js
+import './App.css';
+import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
+//Pages
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+```
