@@ -312,3 +312,52 @@ export const useAuthentication = ()=>{
     }
 }
 ```
+
+## Registrando usuário no sistema
+* Nesse momento vamos utilizar ainda o Hook `useAuthentication` que criamos anteriormente e vamos adicionar mais algumas funções para que ele funcione.
+* O hook completo pode ser encontrado em `src/hooks/useAuthentication`
+* Para resumir, precisamos usar um Try e Catch para registrar o usuario.
+```js
+try {
+            const {user} = await createUserWithEmailAndPassword(
+                auth,
+                data.email,
+                data.password
+            )
+            await updateProfile(user, {
+                displayName: data.displayName
+            })
+            setLoading(false)
+            return user
+
+        } catch (error) {
+            console.log(error.message)
+            console.log(typeof error.message)
+
+            let systemErrorMessage
+            if(error.message.includes("PASSWORD")){
+                systemErrorMessage = "A senha precisa conter pelo menos 6 caracteres."
+            }else if(error.message.includes("email-already")){
+                systemErrorMessage = "E-mail já cadastrado"
+            }else{
+                systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde."
+            }
+            setError(systemErrorMessage)
+            setLoading(false)
+        }
+```
+* Depois precisaremos fazer um useEffect para evitar memory leak
+```js
+useEffect(()=>{
+        return () => setCancelled(true)
+    }, [])
+```
+* Por fim precisaremos retornar as informações e funções para serem usadas no Front-end
+```js
+return{
+        auth,
+        createUser,
+        error,
+        loading
+    }
+```
