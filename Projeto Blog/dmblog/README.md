@@ -361,3 +361,20 @@ return{
         loading
     }
 ```
+## Contexto de autenticação
+* Vamos criar uma pasta para criarmos um contexto em `src` e criaremos o contexto chamado `AuthContext.js`
+* Nesse arquivos vamos criar o contexto e o Provider e exportaremos
+* Depois de criarmos e exportarmos o Provider, vamos importar no `App.js` onde o Provider vai encapsular o nosso `BrowserRouter`
+* `AuthContext.js`
+```js
+import { useContext, createContext } from "react";
+
+const AuthContext = createContext()
+
+export function AuthProvider({children, value}){
+    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+}
+export function useAuthValue(){
+    return useContext(AuthContext)
+}
+```

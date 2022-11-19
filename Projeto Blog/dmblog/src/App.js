@@ -1,5 +1,7 @@
 import './App.css';
 import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
+//Context
+import { AuthProvider } from './pages/context/AuthContext';
 //Pages
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -12,20 +14,22 @@ import NotFound from './pages/NotFound/NotFound';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar/>
-        <div className='container'>
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/about' element={<About/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/register' element={<Register/>}/>
-            {/* 404 */}
-            <Route path='*' element={<NotFound/>}/>
-          </Routes>
-        </div>
-        <Footer/>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Navbar/>
+          <div className='container'>
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/about' element={<About/>}/>
+              <Route path='/login' element={<Login/>}/>
+              <Route path='/register' element={<Register/>}/>
+              {/* 404 */}
+              <Route path='*' element={<NotFound/>}/>
+            </Routes>
+          </div>
+          <Footer/>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
