@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate} from "react-router-dom"
 import {useAuthValue} from "../../context/AuthContext"
+import { useInsertDocument } from '../../hooks/useInsertDocument'
 import styles from "./CreatePost.module.css"
 
 const CreatePost = () => {
@@ -10,8 +11,30 @@ const CreatePost = () => {
   const [tags, setTags] = useState([])
   const [formError, setFormError] = useState("")
 
+  const {user} = useAuthValue()
+
+  const {insertDocument, response} = useInsertDocument("posts") //nome da collection "posts"
+
   const handleSubmit = (e)=>{
     e.preventDefault()
+    setFormError("")
+
+    //validate image URL
+
+    //criar o array de tags
+
+    //checar todos os valores
+
+    insertDocument({
+      title,
+      image,
+      body,
+      tags,
+      uid: user.uid,
+      createBy: user.displayName
+    })
+
+    //redirect to home page
   }
   return (
     <div className={styles.create_post}>
@@ -53,7 +76,9 @@ const CreatePost = () => {
             value={tags}
             onChange={(e)=> setTags(e.target.value)}/>
           </label>
-          <button className='btn'>Publicar</button>
+          {!response.loading && <button className='btn'>Publicar</button>}
+          {response.loading && <button className='btn' disabled>Aguarde...</button>}
+          {response.error && <p className='error'>{response.error}</p>}
           
         </form>
     </div>
